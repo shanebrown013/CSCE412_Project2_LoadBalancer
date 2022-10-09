@@ -1,4 +1,5 @@
 #include <iostream>
+#include "requests.cpp"
 
 using namespace std;
 
@@ -10,7 +11,11 @@ int main() {
     cin >> numOfServers;
 
     int timeRun = 0;
-    cout << "Enter the time you want the load balancer (seconds): ";
+    cout << "Enter the time you want to run the load balancer (seconds): ";
     cin >> timeRun;
+
+    // TEST
+    Request test;
+    test.generateIP();
     
 }
