@@ -42,7 +42,7 @@ bool Webserver::checkStatus(Request *r, int *tableCount, ofstream &fw, double et
         return true;
     } else {
         if (tCurrTemp.count() > (this->currentRequest.processing_time)) {
-            fw << *tableCount << ".\t\tAt " << et << " clock cycles, Server " << currentRequest.serverName << " Proccessed request FROM " << currentRequest.ipIN << " TO " << currentRequest.ipOUT << " that had a processing time of " << currentRequest.processing_time << endl;
+            fw << *tableCount << ".\t\tAt " << et << " clock cycles, Server " << currentRequest.serverName << " Proccessed request FROM " << currentRequest.ipIN << " TO " << currentRequest.ipOUT << " that had a processing time of " << currentRequest.processing_time << " clock cycles" << endl;
             (*tableCount)++;
             this->q = nullptr;
             addRequest(r);
@@ -69,7 +69,7 @@ bool Webserver::checkStatus2(int *tableCount, ofstream &fw, double et, int timeR
     }
 
     if (tCurrTemp.count() > (this->currentRequest.processing_time)) {
-        fw << *tableCount << ".\t\tAt " << et << " clock cycles, Server " << currentRequest.serverName << " Proccessed request FROM " << currentRequest.ipIN << " TO " << currentRequest.ipOUT << " that had a processing time of " << currentRequest.processing_time << endl;
+        fw << *tableCount << ".\t\tAt " << et << " clock cycles, Server " << currentRequest.serverName << " Proccessed request FROM " << currentRequest.ipIN << " TO " << currentRequest.ipOUT << " that had a processing time of " << currentRequest.processing_time << " clock cycles" << endl;
         (*tableCount)++;
         this->q = nullptr;
         this->start_time = chrono::system_clock::now() + chrono::hours(1000);

@@ -1,0 +1,41 @@
+
+Webservers:
+A
+B
+C
+D
+E
+
+Initial Queue Size: 10
+The requests have a random process time of 2-500 per request
+Number of requests added per random cycles range from 1 - numOfServers * 2 every 10 clock cycles.
+1.		At 103 clock cycles, Server D Proccessed request FROM 34.122.162.37 TO 230.117.206.68 that had a processing time of 102 clock cycles
+2.		At 127 clock cycles, Server C Proccessed request FROM 218.152.75.216 TO 55.111.155.120 that had a processing time of 126 clock cycles
+3.		At 198 clock cycles, Server E Proccessed request FROM 235.149.4.168 TO 196.86.20.9 that had a processing time of 197 clock cycles
+4.		At 269 clock cycles, Server B Proccessed request FROM 220.163.180.233 TO 160.113.57.11 that had a processing time of 268 clock cycles
+5.		At 347 clock cycles, Server B Proccessed request FROM 214.42.151.58 TO 158.180.241.60 that had a processing time of 77 clock cycles
+6.		At 408 clock cycles, Server A Proccessed request FROM 237.20.135.132 TO 218.83.112.107 that had a processing time of 407 clock cycles
+7.		At 440 clock cycles, Server C Proccessed request FROM 7.40.0.14 TO 169.52.243.235 that had a processing time of 312 clock cycles
+8.		At 556 clock cycles, Server E Proccessed request FROM 107.39.50.20 TO 235.226.217.239 that had a processing time of 357 clock cycles
+9.		At 600 clock cycles, Server D Proccessed request FROM 76.19.5.6 TO 57.72.189.129 that had a processing time of 496 clock cycles
+10.		At 684 clock cycles, Server B Proccessed request FROM 76.180.205.78 TO 211.131.226.41 that had a processing time of 336 clock cycles
+11.		At 703 clock cycles, Server D Proccessed request FROM 73.242.62.97 TO 215.84.223.45 that had a processing time of 102 clock cycles
+12.		At 720 clock cycles, Server A Proccessed request FROM 86.113.205.162 TO 184.194.121.236 that had a processing time of 311 clock cycles
+13.		At 732 clock cycles, Server B Proccessed request FROM 229.155.83.6 TO 213.201.153.169 that had a processing time of 47 clock cycles
+14.		At 734 clock cycles, Server A Proccessed request FROM 157.191.27.43 TO 8.6.251.53 that had a processing time of 13 clock cycles
+15.		At 769 clock cycles, Server B Proccessed request FROM 132.86.151.25 TO 59.28.197.77 that had a processing time of 36 clock cycles
+16.		At 789 clock cycles, Server E Proccessed request FROM 230.126.194.51 TO 84.78.170.2 that had a processing time of 232 clock cycles
+17.		At 876 clock cycles, Server A Proccessed request FROM 217.170.71.154 TO 238.1.39.54 that had a processing time of 141 clock cycles
+18.		At 883 clock cycles, Server D Proccessed request FROM 107.149.233.67 TO 57.34.206.170 that had a processing time of 179 clock cycles
+19.		At 926 clock cycles, Server C Proccessed request FROM 232.29.218.94 TO 120.63.27.119 that had a processing time of 485 clock cycles
+20.		At 1142 clock cycles, Server B Proccessed request FROM 32.184.123.150 TO 159.166.144.242 that had a processing time of 372 clock cycles
+21.		At 1176 clock cycles, Server B Proccessed request FROM 13.179.29.19 TO 14.175.119.231 that had a processing time of 33 clock cycles
+22.		At 1182 clock cycles, Server E Proccessed request FROM 6.252.20.0 TO 30.198.182.2 that had a processing time of 392 clock cycles
+23.		At 1198 clock cycles, Server D Proccessed request FROM 249.167.221.88 TO 37.211.73.214 that had a processing time of 314 clock cycles
+24.		At 1204 clock cycles, Server A Proccessed request FROM 227.187.171.209 TO 108.35.1.54 that had a processing time of 327 clock cycles
+25.		At 1343 clock cycles, Server C Proccessed request FROM 243.26.244.100 TO 17.178.62.174 that had a processing time of 416 clock cycles
+26.		At 1592 clock cycles, Server B Proccessed request FROM 3.11.123.244 TO 215.112.178.105 that had a processing time of 415 clock cycles
+All requests were processed at 1592
+
+
+Existing Request Queue: 0
