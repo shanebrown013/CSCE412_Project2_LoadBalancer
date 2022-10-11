@@ -6,6 +6,7 @@
 #include <ctime>
 #include <vector>
 #include <queue>
+#include <fstream>
 #include <unistd.h>
 #include "requests.h"
 
@@ -22,8 +23,8 @@ class Webserver {
         //functions
         Webserver(char name);
         void addRequest(Request *r);
-        bool checkStatus(Request *r, int *tableCount);
-        bool checkStatus2(int *tableCount);
+        bool checkStatus(Request *r, int *tableCount, ofstream &fw, double et, int timeRun);
+        bool checkStatus2(int *tableCount, ofstream &fw, double et, int timeRun);
 
 };
 
