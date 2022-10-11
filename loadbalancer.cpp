@@ -103,7 +103,7 @@ int main() {
                     index++;
                 }
             if (newRequestIndexCount % 12 == 0) {
-                // add a new request every 15th run
+                // add a new request every 12th run
                 Request request;
                 requestqueue.push(request);
             }
