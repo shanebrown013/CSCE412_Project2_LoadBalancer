@@ -69,17 +69,31 @@ int main() {
             //     requestqueue.push(request);
             // }
         }
-        cout << "HERE" << endl;
+        // cout << "HERE" << endl;
         wsStatus = false;
     }
 
-    // for (int i = 0; i < ws.size(); i++) {
-    //     // go through all webservers and see if the *q is nullptr
-    //     if (ws.at(i).q != nullptr) {
-    //         cout << "NOT COMPLETE" << endl;
-    //     }
-    // }
-
-
+    int finishCount = 0;
+    bool complete = false;
+    index = 0;
+    while (complete == false) {
+        // go through all webservers and see if the *q is nullptr
+        complete = ws.at(index).checkStatus2(tableCountRef);
+        sleep(1);
+        if (complete) {
+            finishCount++;
+        }
+        if (finishCount == numOfServers) {
+            complete = true;
+            break;
+        } else {
+            complete = false;
+        }
+        if (index + 1 == ws.size()) {
+            index = 0;
+        } else {
+            index++;
+        }
+    }
 
 }

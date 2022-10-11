@@ -23,6 +23,7 @@ class Webserver {
         Webserver(char name);
         void addRequest(Request *r);
         bool checkStatus(Request *r, int *tableCount);
+        bool checkStatus2(int *tableCount);
 
 };
 
