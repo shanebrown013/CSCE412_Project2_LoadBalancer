@@ -20,7 +20,7 @@ Request::Request() {
         }
     }
     // Generate random process time
-    int pTime = rand() % 6 + 5;
+    int pTime = rand() % 9 + 2;
     this->processing_time = pTime;
 
     this->serverName = "";

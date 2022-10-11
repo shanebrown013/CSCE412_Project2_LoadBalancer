@@ -7,6 +7,42 @@
 
 using namespace std;
 
+class Timer
+{
+public:
+    void start(){
+        startTime = chrono::system_clock::now();
+        isRunning = true;
+    }
+    
+    void stop(){
+        endTime = chrono::system_clock::now();
+        isRunning = false;
+    }
+    
+    double elapsedMilliseconds(){
+        chrono::time_point<chrono::system_clock> endTime;
+        
+        if(isRunning){
+            endTime = chrono::system_clock::now();
+        }
+        else{
+            endTime = endTime;
+        }
+        
+        return chrono::duration_cast<chrono::milliseconds>(endTime - startTime).count();
+    }
+    
+    double elapsedSeconds(){
+        return elapsedMilliseconds() / 1000.0;
+    }
+
+private:
+    chrono::time_point<chrono::system_clock> startTime;
+    chrono::time_point<chrono::system_clock> endTime;
+    bool isRunning;
+};
+
 int main() {
     srand(time(NULL));
 
@@ -29,14 +65,14 @@ int main() {
     // create webservers
     vector<Webserver> ws;
     int asciiValue = 65;
-    cout << "Webservers:" << endl;
+    cout << "\nWebservers:" << endl;
     for (int i = 0; i < numOfServers; i++) {
         Webserver server((char)asciiValue);
         asciiValue++;
         cout << server.wName << endl;
         ws.push_back(server);
     }
-    cout << endl << endl;
+    cout << endl;
 
     bool wsStatus = false;
 
@@ -48,7 +84,9 @@ int main() {
     int tableCount = 1;
     int *tableCountRef = &tableCount;
     int newRequestIndexCount = 0;
-    while (!requestqueue.empty()) {
+    Timer timer;
+    timer.start();
+    while (!requestqueue.empty() && (timer.elapsedSeconds() < timeRun)) {
         Request temp = requestqueue.front();
         requestqueue.pop();
         while (wsStatus == false) {
@@ -64,10 +102,12 @@ int main() {
                 } else {
                     index++;
                 }
-            // if (newRequestIndexCount % 222 == 0) {
-            //     Request request;
-            //     requestqueue.push(request);
-            // }
+            if (newRequestIndexCount % 12 == 0) {
+                // add a new request every 15th run
+                Request request;
+                requestqueue.push(request);
+            }
+            newRequestIndexCount++;
         }
         // cout << "HERE" << endl;
         wsStatus = false;
@@ -95,5 +135,6 @@ int main() {
             index++;
         }
     }
+    cout << "Existing Request Queue: " << requestqueue.size() << endl;
 
 }
