@@ -1,26 +1,27 @@
-#include <iostream>
 
-using namespace std;
+#include "requests.h"
 
-class Request {
-    public:
-        string ipIN;
-        string ipOUT;
-        int processTime;
-
-        //functions
-        void generateIP();
-};
-
-void Request::generateIP() {
-    srand(time(NULL));
-    string tempIP = "";
-    int num = 0;
-    for (int i = 0; i < 4; i++) {
-        // run 4 times
-        num = rand() % 255;
-        tempIP = tempIP + to_string(num) + ".";
+Request::Request() {
+    for (int j = 0; j < 2; j++) {
+        string tempIP = "";
+        int num = 0;
+        for (int i = 0; i < 4; i++) {
+            // run 4 times
+            num = rand() % 255;
+            tempIP = tempIP + to_string(num) + ".";
+        }
+        tempIP = tempIP.substr(0, tempIP.length()-1);
+        if (j == 0) {
+            // populate this.ipIN
+            this->ipIN = tempIP;
+        } else if (j == 1) {
+            // populate ipOUT
+            this->ipOUT = tempIP;
+        }
     }
-    tempIP = tempIP.substr(0, tempIP.length()-1);
-    cout << "TEST: " << tempIP << endl;
+    // Generate random process time
+    int pTime = rand() % 6 + 5;
+    this->processing_time = pTime;
+
+    this->serverName = "";
 }
