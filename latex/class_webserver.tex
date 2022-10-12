@@ -69,7 +69,7 @@ Adds a request to the available webserver. This function sets the server name fo
 \doxysubsubsection{\texorpdfstring{checkStatus()}{checkStatus()}}
 {\footnotesize\ttfamily bool Webserver\+::check\+Status (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_request}{Request}} $\ast$}]{r,  }\item[{int $\ast$}]{table\+Count,  }\item[{ofstream \&}]{fw,  }\item[{double}]{et,  }\item[{int}]{time\+Run }\end{DoxyParamCaption})}
 
-Checks the status of a specific webserver. Makes sure the current request in the specific webserver is completed before exchanging the request for a new one. If the request is completed on the specific webserver, it will output a statement to the output file then replace the request with the new one
+Checks the status of a specific webserver and request. Makes sure the current request in the specific webserver is completed before exchanging the request for a new one. If the request is completed on the specific webserver, it will output a statement to the output file then replace the request with the new one
 
 
 \begin{DoxyParams}{Parameters}
@@ -90,7 +90,7 @@ Checks the status of a specific webserver. Makes sure the current request in the
 \doxysubsubsection{\texorpdfstring{checkStatus2()}{checkStatus2()}}
 {\footnotesize\ttfamily bool Webserver\+::check\+Status2 (\begin{DoxyParamCaption}\item[{int $\ast$}]{table\+Count,  }\item[{ofstream \&}]{fw,  }\item[{double}]{et,  }\item[{int}]{time\+Run }\end{DoxyParamCaption})}
 
-Similar to \mbox{\hyperlink{class_webserver_a7e9ccdd339e7238d7f7685ff1a66f1d6}{check\+Status()}}. Checks the status of a specific webserver. Makes sure the current request in the specific webserver is completed. If the request is completed on the specific webserver, it will output a statement to the output file. but NOT add/replace a new request.
+Similar to \mbox{\hyperlink{class_webserver_a7e9ccdd339e7238d7f7685ff1a66f1d6}{check\+Status()}}. Checks the status of a specific webserver and request. Makes sure the current request in the specific webserver is completed. If the request is completed on the specific webserver, it will output a statement to the output file. but NOT add/replace a new request.
 
 
 \begin{DoxyParams}{Parameters}

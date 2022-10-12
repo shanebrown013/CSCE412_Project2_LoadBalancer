@@ -42,7 +42,7 @@ class Webserver {
         void addRequest(Request *r);
 
         /**
-         * Checks the status of a specific webserver. Makes sure the current request in the specific webserver is completed 
+         * Checks the status of a specific webserver and request. Makes sure the current request in the specific webserver is completed 
          * before exchanging the request for a new one. If the request is completed on the specific
          * webserver, it will output a statement to the output file then replace the request with the new one
          * 
@@ -55,7 +55,7 @@ class Webserver {
         bool checkStatus(Request *r, int *tableCount, ofstream &fw, double et, int timeRun);
 
         /**
-         * Similar to checkStatus(). Checks the status of a specific webserver. Makes sure the current request in the specific webserver is completed.
+         * Similar to checkStatus(). Checks the status of a specific webserver and request. Makes sure the current request in the specific webserver is completed.
          * If the request is completed on the specific
          * webserver, it will output a statement to the output file. but NOT add/replace a new request.
          * 

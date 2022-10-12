@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
 <meta name="generator" content="Doxygen 1.9.5"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>CSCE412 - Project 2 Load Balancer: Main Page</title>
+<title>CSCE412 - Project 2 Load Balancer: CSCE412_Project2_LoadBalancer</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -68,10 +68,18 @@ $(function() {
 </div>
 </div>
 
-<div class="header">
-  <div class="headertitle"><div class="title">CSCE412 - Project 2 Load Balancer Documentation</div></div>
+<div><div class="header">
+  <div class="headertitle"><div class="title">CSCE412_Project2_LoadBalancer </div></div>
 </div><!--header-->
 <div class="contents">
+<div class="textblock"><p ><a class="anchor" id="md_README"></a> </p>
+<h1><a class="anchor" id="autotoc_md1"></a>
+Project Description</h1>
+<p >My implementation of this project first gets 2 inputs from the user (number of servers to create and amount of clock cycles to run the load balancer). It will then to proceed to create an initial queue with the (number of servers to create) * 2. At the same time the program will open, or create, an output file , LoadBalancerLog.txt, to output the process and critical information. Next, it will create the amount of webservers the user defined. It will then assign the newly created webservers with a request. Every clock cycle, the load balancer will iterate to a webserver and check if the request at that webserver is completed. If it is completed, the webserver will be given a new request and that completed request will provide a log in the output file. If the request is not yet completed, it will proceed to the next clock cycle and iterate to the next webserver where it will continue to perform the same actions. The load balanacer will proceed in a cycle like this until the queue is empty, or the amount of cycles the user inputted is reached.</p>
+<h1><a class="anchor" id="autotoc_md2"></a>
+Documentation</h1>
+<p >The documentation for this project is provided by doxygen. </p>
+</div></div><!-- PageDoc -->
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
