@@ -1,0 +1,47 @@
+\hypertarget{loadbalancer_8cpp}{}\doxysection{loadbalancer.\+cpp File Reference}
+\label{loadbalancer_8cpp}\index{loadbalancer.cpp@{loadbalancer.cpp}}
+{\ttfamily \#include $<$iostream$>$}\newline
+{\ttfamily \#include $<$queue$>$}\newline
+{\ttfamily \#include $<$vector$>$}\newline
+{\ttfamily \#include $<$unistd.\+h$>$}\newline
+{\ttfamily \#include $<$fstream$>$}\newline
+{\ttfamily \#include \char`\"{}requests.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}webserver.\+h\char`\"{}}\newline
+\doxysubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \mbox{\hyperlink{class_timer}{Timer}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+int \mbox{\hyperlink{loadbalancer_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4}{main}} ()
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{loadbalancer_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4}\label{loadbalancer_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4}} 
+\index{loadbalancer.cpp@{loadbalancer.cpp}!main@{main}}
+\index{main@{main}!loadbalancer.cpp@{loadbalancer.cpp}}
+\doxysubsubsection{\texorpdfstring{main()}{main()}}
+{\footnotesize\ttfamily int main (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+The main load balancer fucntion that performs the load balancer duties. This function will call the other classes, \mbox{\hyperlink{class_webserver}{Webserver}} and \mbox{\hyperlink{class_request}{Request}}, to simulate the load balancer. The user will be prompted to enter how many webservers they wish to create and how many clock cycles they would like the load balancer to cycle through. The output for the load balancer will be written into a newly created file named, \char`\"{}\+Load\+Balancer\+Log.\+txt\char`\"{} \texorpdfstring{$<$}{<} Number of webservers to create from user input
+
+\texorpdfstring{$<$}{<} Amount of cycles to run the load balancer through from user input
+
+\texorpdfstring{$<$}{<} A queue of type \mbox{\hyperlink{class_request}{Request}} that holds the generated requests
+
+\texorpdfstring{$<$}{<} Outout file for the load balancer results
+
+\texorpdfstring{$<$}{<} Status that tells if the request at a specific webserver is completed
+
+\texorpdfstring{$<$}{<} Index value used for iterating through webservers
+
+\texorpdfstring{$<$}{<} Count integer used for output purposes
+
+\texorpdfstring{$<$}{<} Reference pointer to table\+Count
+
+\texorpdfstring{$<$}{<} Counter used to indicate when to random add new requests to the queue
+
+\texorpdfstring{$<$}{<} Variable of type \mbox{\hyperlink{class_request}{Request}} used to manipulate specific requests

@@ -1,0 +1,67 @@
+\hypertarget{class_request}{}\doxysection{Request Class Reference}
+\label{class_request}\index{Request@{Request}}
+
+
+{\ttfamily \#include $<$requests.\+h$>$}
+
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_request_afaf8d8928de7ffff8a3767589489bd33}{Request}} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+string \mbox{\hyperlink{class_request_ae6f3d3754c579a4f0f5344594bb68532}{ip\+IN}}
+\item 
+string \mbox{\hyperlink{class_request_a60ada41c7619bf2cf931a6aa8c05d716}{ip\+OUT}}
+\item 
+int \mbox{\hyperlink{class_request_acc69c067c1d2b35766028e746044e491}{processing\+\_\+time}}
+\item 
+string \mbox{\hyperlink{class_request_acf871aca3fca055bb10b566ac1a891e3}{server\+Name}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\mbox{\hyperlink{class_request}{Request}} class refers to everything involving requests. This serves as a object with ip\+IN, ip\+OUT, processing\+\_\+time, and the server\+Name 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_request_afaf8d8928de7ffff8a3767589489bd33}\label{class_request_afaf8d8928de7ffff8a3767589489bd33}} 
+\index{Request@{Request}!Request@{Request}}
+\index{Request@{Request}!Request@{Request}}
+\doxysubsubsection{\texorpdfstring{Request()}{Request()}}
+{\footnotesize\ttfamily Request\+::\+Request (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Constructor for the \mbox{\hyperlink{class_request}{Request}} class that generates the random ip\+IN, ip\+OUT, and processing times. Also, sets the default value for server\+Name. 
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{class_request_ae6f3d3754c579a4f0f5344594bb68532}\label{class_request_ae6f3d3754c579a4f0f5344594bb68532}} 
+\index{Request@{Request}!ipIN@{ipIN}}
+\index{ipIN@{ipIN}!Request@{Request}}
+\doxysubsubsection{\texorpdfstring{ipIN}{ipIN}}
+{\footnotesize\ttfamily string Request\+::ip\+IN}
+
+Randomly generated IP address that is receiving (IN) the request process \mbox{\Hypertarget{class_request_a60ada41c7619bf2cf931a6aa8c05d716}\label{class_request_a60ada41c7619bf2cf931a6aa8c05d716}} 
+\index{Request@{Request}!ipOUT@{ipOUT}}
+\index{ipOUT@{ipOUT}!Request@{Request}}
+\doxysubsubsection{\texorpdfstring{ipOUT}{ipOUT}}
+{\footnotesize\ttfamily string Request\+::ip\+OUT}
+
+Randomly generated IP address that is sending (OUT) the request process \mbox{\Hypertarget{class_request_acc69c067c1d2b35766028e746044e491}\label{class_request_acc69c067c1d2b35766028e746044e491}} 
+\index{Request@{Request}!processing\_time@{processing\_time}}
+\index{processing\_time@{processing\_time}!Request@{Request}}
+\doxysubsubsection{\texorpdfstring{processing\_time}{processing\_time}}
+{\footnotesize\ttfamily int Request\+::processing\+\_\+time}
+
+Randomly generated number that refers to how long it takes a request to fully/successfully complete \mbox{\Hypertarget{class_request_acf871aca3fca055bb10b566ac1a891e3}\label{class_request_acf871aca3fca055bb10b566ac1a891e3}} 
+\index{Request@{Request}!serverName@{serverName}}
+\index{serverName@{serverName}!Request@{Request}}
+\doxysubsubsection{\texorpdfstring{serverName}{serverName}}
+{\footnotesize\ttfamily string Request\+::server\+Name}
+
+\mbox{\hyperlink{class_webserver}{Webserver}} name that the request is assigned to 
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{requests_8h}{requests.\+h}}\item 
+\mbox{\hyperlink{requests_8cpp}{requests.\+cpp}}\end{DoxyCompactItemize}

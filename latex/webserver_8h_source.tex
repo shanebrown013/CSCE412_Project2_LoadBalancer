@@ -1,0 +1,39 @@
+\hypertarget{webserver_8h_source}{}\doxysection{webserver.\+h}
+\mbox{\hyperlink{webserver_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 \textcolor{preprocessor}{\#ifndef WEBSERVER\_H}}
+\DoxyCodeLine{2 \textcolor{preprocessor}{\#define WEBSERVER\_H}}
+\DoxyCodeLine{3 }
+\DoxyCodeLine{4 \textcolor{preprocessor}{\#include <iostream>}}
+\DoxyCodeLine{5 \textcolor{preprocessor}{\#include <chrono>}}
+\DoxyCodeLine{6 \textcolor{preprocessor}{\#include <ctime>}}
+\DoxyCodeLine{7 \textcolor{preprocessor}{\#include <vector>}}
+\DoxyCodeLine{8 \textcolor{preprocessor}{\#include <queue>}}
+\DoxyCodeLine{9 \textcolor{preprocessor}{\#include <fstream>}}
+\DoxyCodeLine{10 \textcolor{preprocessor}{\#include <unistd.h>}}
+\DoxyCodeLine{11 \textcolor{preprocessor}{\#include "{}\mbox{\hyperlink{requests_8h}{requests.h}}"{}}}
+\DoxyCodeLine{12 }
+\DoxyCodeLine{13 \textcolor{keyword}{using namespace }std;}
+\DoxyCodeLine{14 }
+\DoxyCodeLine{19 \textcolor{keyword}{class }\mbox{\hyperlink{class_webserver}{Webserver}} \{}
+\DoxyCodeLine{20     \textcolor{keyword}{public}: }
+\DoxyCodeLine{21         \textcolor{keywordtype}{char} \mbox{\hyperlink{class_webserver_af7b04ce7dcdc140c66c654aa8fd13572}{wName}}; }
+\DoxyCodeLine{22         chrono::system\_clock::time\_point \mbox{\hyperlink{class_webserver_a251bc06ca72098cace61e5ea7e339b6b}{start\_time}}; }
+\DoxyCodeLine{23         chrono::system\_clock::time\_point \mbox{\hyperlink{class_webserver_a8c3fa35dc5b176fba72676d7ffa1813b}{current\_time}}; }
+\DoxyCodeLine{24         \mbox{\hyperlink{class_request}{Request}} \mbox{\hyperlink{class_webserver_af9391fb140f95db4414ef5c814a87a8a}{currentRequest}}; }
+\DoxyCodeLine{25         \mbox{\hyperlink{class_request}{Request}} *\mbox{\hyperlink{class_webserver_ac4591c1f491d483b1de7bdf330165856}{q}}; }
+\DoxyCodeLine{27         \textcolor{comment}{//functions}}
+\DoxyCodeLine{28 }
+\DoxyCodeLine{34         \mbox{\hyperlink{class_webserver}{Webserver}}(\textcolor{keywordtype}{char} name);}
+\DoxyCodeLine{35 }
+\DoxyCodeLine{42         \textcolor{keywordtype}{void} \mbox{\hyperlink{class_webserver_adae90ecdbbd19f3e660beae76627fef8}{addRequest}}(\mbox{\hyperlink{class_request}{Request}} *r);}
+\DoxyCodeLine{43 }
+\DoxyCodeLine{55         \textcolor{keywordtype}{bool} \mbox{\hyperlink{class_webserver_a7e9ccdd339e7238d7f7685ff1a66f1d6}{checkStatus}}(\mbox{\hyperlink{class_request}{Request}} *r, \textcolor{keywordtype}{int} *tableCount, ofstream \&fw, \textcolor{keywordtype}{double} et, \textcolor{keywordtype}{int} timeRun);}
+\DoxyCodeLine{56 }
+\DoxyCodeLine{67         \textcolor{keywordtype}{bool} \mbox{\hyperlink{class_webserver_ad4819669c7a0f14dddd7fedf82c14c14}{checkStatus2}}(\textcolor{keywordtype}{int} *tableCount, ofstream \&fw, \textcolor{keywordtype}{double} et, \textcolor{keywordtype}{int} timeRun);}
+\DoxyCodeLine{68 }
+\DoxyCodeLine{69 \};}
+\DoxyCodeLine{70 }
+\DoxyCodeLine{71 \textcolor{preprocessor}{\#endif}}
+
+\end{DoxyCode}

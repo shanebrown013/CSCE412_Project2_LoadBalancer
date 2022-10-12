@@ -1,0 +1,144 @@
+\hypertarget{class_webserver}{}\doxysection{Webserver Class Reference}
+\label{class_webserver}\index{Webserver@{Webserver}}
+
+
+{\ttfamily \#include $<$webserver.\+h$>$}
+
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_webserver_a6320bc743ac8a228d590fdcf7643955d}{Webserver}} (char name)
+\item 
+void \mbox{\hyperlink{class_webserver_adae90ecdbbd19f3e660beae76627fef8}{add\+Request}} (\mbox{\hyperlink{class_request}{Request}} $\ast$r)
+\item 
+bool \mbox{\hyperlink{class_webserver_a7e9ccdd339e7238d7f7685ff1a66f1d6}{check\+Status}} (\mbox{\hyperlink{class_request}{Request}} $\ast$r, int $\ast$table\+Count, ofstream \&fw, double et, int time\+Run)
+\item 
+bool \mbox{\hyperlink{class_webserver_ad4819669c7a0f14dddd7fedf82c14c14}{check\+Status2}} (int $\ast$table\+Count, ofstream \&fw, double et, int time\+Run)
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+char \mbox{\hyperlink{class_webserver_af7b04ce7dcdc140c66c654aa8fd13572}{w\+Name}}
+\item 
+chrono\+::system\+\_\+clock\+::time\+\_\+point \mbox{\hyperlink{class_webserver_a251bc06ca72098cace61e5ea7e339b6b}{start\+\_\+time}}
+\item 
+chrono\+::system\+\_\+clock\+::time\+\_\+point \mbox{\hyperlink{class_webserver_a8c3fa35dc5b176fba72676d7ffa1813b}{current\+\_\+time}}
+\item 
+\mbox{\hyperlink{class_request}{Request}} \mbox{\hyperlink{class_webserver_af9391fb140f95db4414ef5c814a87a8a}{current\+Request}}
+\item 
+\mbox{\hyperlink{class_request}{Request}} $\ast$ \mbox{\hyperlink{class_webserver_ac4591c1f491d483b1de7bdf330165856}{q}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\mbox{\hyperlink{class_webserver}{Webserver}} class refers to everything involving requests. This serves as a object that includes w\+Name, start\+\_\+time, current\+\_\+time, current\+Request, and $\ast$q. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_webserver_a6320bc743ac8a228d590fdcf7643955d}\label{class_webserver_a6320bc743ac8a228d590fdcf7643955d}} 
+\index{Webserver@{Webserver}!Webserver@{Webserver}}
+\index{Webserver@{Webserver}!Webserver@{Webserver}}
+\doxysubsubsection{\texorpdfstring{Webserver()}{Webserver()}}
+{\footnotesize\ttfamily Webserver\+::\+Webserver (\begin{DoxyParamCaption}\item[{char}]{name }\end{DoxyParamCaption})}
+
+Constructor for the webserver class that sets the default values for the attributes
+
+
+\begin{DoxyParams}{Parameters}
+{\em name} & The character that represents the \mbox{\hyperlink{class_webserver}{Webserver}} name. \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_webserver_adae90ecdbbd19f3e660beae76627fef8}\label{class_webserver_adae90ecdbbd19f3e660beae76627fef8}} 
+\index{Webserver@{Webserver}!addRequest@{addRequest}}
+\index{addRequest@{addRequest}!Webserver@{Webserver}}
+\doxysubsubsection{\texorpdfstring{addRequest()}{addRequest()}}
+{\footnotesize\ttfamily void Webserver\+::add\+Request (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_request}{Request}} $\ast$}]{r }\end{DoxyParamCaption})}
+
+Adds a request to the available webserver. This function sets the server name for the specific request, sets the current request, sets $\ast$q, and sets the start time when the request is added.
+
+
+\begin{DoxyParams}{Parameters}
+{\em r} & Pointer/reference to the \mbox{\hyperlink{class_request}{Request}} that is being processed/managed. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_webserver_a7e9ccdd339e7238d7f7685ff1a66f1d6}\label{class_webserver_a7e9ccdd339e7238d7f7685ff1a66f1d6}} 
+\index{Webserver@{Webserver}!checkStatus@{checkStatus}}
+\index{checkStatus@{checkStatus}!Webserver@{Webserver}}
+\doxysubsubsection{\texorpdfstring{checkStatus()}{checkStatus()}}
+{\footnotesize\ttfamily bool Webserver\+::check\+Status (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_request}{Request}} $\ast$}]{r,  }\item[{int $\ast$}]{table\+Count,  }\item[{ofstream \&}]{fw,  }\item[{double}]{et,  }\item[{int}]{time\+Run }\end{DoxyParamCaption})}
+
+Checks the status of a specific webserver. Makes sure the current request in the specific webserver is completed before exchanging the request for a new one. If the request is completed on the specific webserver, it will output a statement to the output file then replace the request with the new one
+
+
+\begin{DoxyParams}{Parameters}
+{\em r} & Pointer/reference to the \mbox{\hyperlink{class_request}{Request}} that is being processed/managed. \\
+\hline
+{\em table\+Count} & Number that helps iterate number of completed request to output file. \\
+\hline
+{\em fw} & Pass by reference of the ofstream object to write to the output file. \\
+\hline
+{\em et} & Value of when the process was completed \\
+\hline
+{\em time\+Run} & User-\/input value of how many clock cycles the load balancer will run. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_webserver_ad4819669c7a0f14dddd7fedf82c14c14}\label{class_webserver_ad4819669c7a0f14dddd7fedf82c14c14}} 
+\index{Webserver@{Webserver}!checkStatus2@{checkStatus2}}
+\index{checkStatus2@{checkStatus2}!Webserver@{Webserver}}
+\doxysubsubsection{\texorpdfstring{checkStatus2()}{checkStatus2()}}
+{\footnotesize\ttfamily bool Webserver\+::check\+Status2 (\begin{DoxyParamCaption}\item[{int $\ast$}]{table\+Count,  }\item[{ofstream \&}]{fw,  }\item[{double}]{et,  }\item[{int}]{time\+Run }\end{DoxyParamCaption})}
+
+Similar to \mbox{\hyperlink{class_webserver_a7e9ccdd339e7238d7f7685ff1a66f1d6}{check\+Status()}}. Checks the status of a specific webserver. Makes sure the current request in the specific webserver is completed. If the request is completed on the specific webserver, it will output a statement to the output file. but NOT add/replace a new request.
+
+
+\begin{DoxyParams}{Parameters}
+{\em table\+Count} & Number that helps iterate number of completed request to output file. \\
+\hline
+{\em fw} & Pass by reference of the ofstream object to write to the output file. \\
+\hline
+{\em et} & Value of when the process was completed \\
+\hline
+{\em time\+Run} & User-\/input value of how many clock cycles the load balancer will run. \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{class_webserver_a8c3fa35dc5b176fba72676d7ffa1813b}\label{class_webserver_a8c3fa35dc5b176fba72676d7ffa1813b}} 
+\index{Webserver@{Webserver}!current\_time@{current\_time}}
+\index{current\_time@{current\_time}!Webserver@{Webserver}}
+\doxysubsubsection{\texorpdfstring{current\_time}{current\_time}}
+{\footnotesize\ttfamily chrono\+::system\+\_\+clock\+::time\+\_\+point Webserver\+::current\+\_\+time}
+
+Current time from when the request was added to the webserver \mbox{\Hypertarget{class_webserver_af9391fb140f95db4414ef5c814a87a8a}\label{class_webserver_af9391fb140f95db4414ef5c814a87a8a}} 
+\index{Webserver@{Webserver}!currentRequest@{currentRequest}}
+\index{currentRequest@{currentRequest}!Webserver@{Webserver}}
+\doxysubsubsection{\texorpdfstring{currentRequest}{currentRequest}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_request}{Request}} Webserver\+::current\+Request}
+
+\mbox{\hyperlink{class_request}{Request}} object that keeps track of the current request on a specific webserver \mbox{\Hypertarget{class_webserver_ac4591c1f491d483b1de7bdf330165856}\label{class_webserver_ac4591c1f491d483b1de7bdf330165856}} 
+\index{Webserver@{Webserver}!q@{q}}
+\index{q@{q}!Webserver@{Webserver}}
+\doxysubsubsection{\texorpdfstring{q}{q}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_request}{Request}}$\ast$ Webserver\+::q}
+
+\mbox{\hyperlink{class_request}{Request}} pointer that helps make sure the webserver is not on a current request throughout the process \mbox{\Hypertarget{class_webserver_a251bc06ca72098cace61e5ea7e339b6b}\label{class_webserver_a251bc06ca72098cace61e5ea7e339b6b}} 
+\index{Webserver@{Webserver}!start\_time@{start\_time}}
+\index{start\_time@{start\_time}!Webserver@{Webserver}}
+\doxysubsubsection{\texorpdfstring{start\_time}{start\_time}}
+{\footnotesize\ttfamily chrono\+::system\+\_\+clock\+::time\+\_\+point Webserver\+::start\+\_\+time}
+
+The starting time when a request gets added to a web server \mbox{\Hypertarget{class_webserver_af7b04ce7dcdc140c66c654aa8fd13572}\label{class_webserver_af7b04ce7dcdc140c66c654aa8fd13572}} 
+\index{Webserver@{Webserver}!wName@{wName}}
+\index{wName@{wName}!Webserver@{Webserver}}
+\doxysubsubsection{\texorpdfstring{wName}{wName}}
+{\footnotesize\ttfamily char Webserver\+::w\+Name}
+
+The name of the webserver (uses the capital alphabet) 
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{webserver_8h}{webserver.\+h}}\item 
+\mbox{\hyperlink{webserver_8cpp}{webserver.\+cpp}}\end{DoxyCompactItemize}

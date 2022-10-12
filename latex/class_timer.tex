@@ -1,0 +1,78 @@
+\hypertarget{class_timer}{}\doxysection{Timer Class Reference}
+\label{class_timer}\index{Timer@{Timer}}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{class_timer_a3a8b5272198d029779dc9302a54305a8}{start}} ()
+\item 
+void \mbox{\hyperlink{class_timer_a63f0eb44b27402196590a03781515dba}{stop}} ()
+\item 
+double \mbox{\hyperlink{class_timer_aa8be6b19dcd47fb13fc19e46750d6ae3}{elapsed\+Milliseconds}} ()
+\item 
+double \mbox{\hyperlink{class_timer_a65ed0689c926397d42bf7620ff198cfa}{elapsed\+Seconds}} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+chrono\+::time\+\_\+point$<$ chrono\+::system\+\_\+clock $>$ \mbox{\hyperlink{class_timer_a33b5a088131c659ce46e564e39349de2}{start\+Time}}
+\item 
+chrono\+::time\+\_\+point$<$ chrono\+::system\+\_\+clock $>$ \mbox{\hyperlink{class_timer_a48204ffd094d4f706a59142bc8a8aeb9}{end\+Time}}
+\item 
+bool \mbox{\hyperlink{class_timer_ac2d26817768879ce4499455629241a3e}{is\+Running}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+This class is to keep track of the time that is passed (similar to a stopwatch) 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_timer_aa8be6b19dcd47fb13fc19e46750d6ae3}\label{class_timer_aa8be6b19dcd47fb13fc19e46750d6ae3}} 
+\index{Timer@{Timer}!elapsedMilliseconds@{elapsedMilliseconds}}
+\index{elapsedMilliseconds@{elapsedMilliseconds}!Timer@{Timer}}
+\doxysubsubsection{\texorpdfstring{elapsedMilliseconds()}{elapsedMilliseconds()}}
+{\footnotesize\ttfamily double Timer\+::elapsed\+Milliseconds (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Return the number of milliseconds that has passed since the timer was first started. \mbox{\Hypertarget{class_timer_a65ed0689c926397d42bf7620ff198cfa}\label{class_timer_a65ed0689c926397d42bf7620ff198cfa}} 
+\index{Timer@{Timer}!elapsedSeconds@{elapsedSeconds}}
+\index{elapsedSeconds@{elapsedSeconds}!Timer@{Timer}}
+\doxysubsubsection{\texorpdfstring{elapsedSeconds()}{elapsedSeconds()}}
+{\footnotesize\ttfamily double Timer\+::elapsed\+Seconds (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Return the number of seconds that has passed since the timer was first started. This function calls the elasped\+Milliseconds() function as well to perform its calculation/conversion to seconds \mbox{\Hypertarget{class_timer_a3a8b5272198d029779dc9302a54305a8}\label{class_timer_a3a8b5272198d029779dc9302a54305a8}} 
+\index{Timer@{Timer}!start@{start}}
+\index{start@{start}!Timer@{Timer}}
+\doxysubsubsection{\texorpdfstring{start()}{start()}}
+{\footnotesize\ttfamily void Timer\+::start (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Start, or begin, the timer (stopwatch). \mbox{\Hypertarget{class_timer_a63f0eb44b27402196590a03781515dba}\label{class_timer_a63f0eb44b27402196590a03781515dba}} 
+\index{Timer@{Timer}!stop@{stop}}
+\index{stop@{stop}!Timer@{Timer}}
+\doxysubsubsection{\texorpdfstring{stop()}{stop()}}
+{\footnotesize\ttfamily void Timer\+::stop (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Stop, or end, the timer (stopwatch). 
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{class_timer_a48204ffd094d4f706a59142bc8a8aeb9}\label{class_timer_a48204ffd094d4f706a59142bc8a8aeb9}} 
+\index{Timer@{Timer}!endTime@{endTime}}
+\index{endTime@{endTime}!Timer@{Timer}}
+\doxysubsubsection{\texorpdfstring{endTime}{endTime}}
+{\footnotesize\ttfamily chrono\+::time\+\_\+point$<$chrono\+::system\+\_\+clock$>$ Timer\+::end\+Time\hspace{0.3cm}{\ttfamily [private]}}
+
+Ending place/time the timer was stopped \mbox{\Hypertarget{class_timer_ac2d26817768879ce4499455629241a3e}\label{class_timer_ac2d26817768879ce4499455629241a3e}} 
+\index{Timer@{Timer}!isRunning@{isRunning}}
+\index{isRunning@{isRunning}!Timer@{Timer}}
+\doxysubsubsection{\texorpdfstring{isRunning}{isRunning}}
+{\footnotesize\ttfamily bool Timer\+::is\+Running\hspace{0.3cm}{\ttfamily [private]}}
+
+True or False value that tracks if the timer is currently running or is currently stopped \mbox{\Hypertarget{class_timer_a33b5a088131c659ce46e564e39349de2}\label{class_timer_a33b5a088131c659ce46e564e39349de2}} 
+\index{Timer@{Timer}!startTime@{startTime}}
+\index{startTime@{startTime}!Timer@{Timer}}
+\doxysubsubsection{\texorpdfstring{startTime}{startTime}}
+{\footnotesize\ttfamily chrono\+::time\+\_\+point$<$chrono\+::system\+\_\+clock$>$ Timer\+::start\+Time\hspace{0.3cm}{\ttfamily [private]}}
+
+Starting place/time the timer was started 
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{loadbalancer_8cpp}{loadbalancer.\+cpp}}\end{DoxyCompactItemize}
